@@ -1,0 +1,82 @@
+REACT JS
+1.library(react) & framework(e.g.angular)
+2.DOM(virtual & real)
+3.Features of REACT
+4.functional & class components
+5.props & state
+6.life cycle methods
+
+1.library                                                         framework
+well tested                                                 it provide structure
+chances of error are less                                  chances of error are more
+import ki jaati hai
+react                                                           angular
+
+2.DOM(DOCUMENT OBJECT MODEL)-tree like structure(web page jab render hota hai tab tree like structure ki tarah represent hota hai)
+    virtual-first changes virtual main hoti hai then 
+    real main hote hai -isme baad main hote hai kyunki ye time consuming hota hai,memory consumption more
+html->head->body->div
+                   |
+                 |    |
+                 h1   p
+for e.g.
+<h1>hello world</h1>---->previous virtual dom
+<h1>hello</h1>---------->recent virtual dom
+process->reconciliation->the process to compare previous virtual dom to recent virtual dom 
+algorithm used is->diffing
+
+3.Features:-
+->its free open source
+->context api is already built in in this
+->make a logic and u can reuse the components(reuseable components are pesent)
+->seamless approach
+->development tools are present(aise tools jinse development fast hoga)
+->easy to use
+
+
+4.Functional components                                     Class based components
+import React from 'react                               import React from 'react;
+export const fn name async()=>{
+
+}                                                       class ClassComponent extends
+                                                            ReactComponent{
+                                                            render(){
+                                                                return(
+                                                                    <div>_</div>
+                                                                )
+                                                            }
+                                                           }
+
+
+5.props                                                        state
+1.used to pass down the data from                1. state used to maintain a data within a component
+parent to child                                              
+2.immutable                                      2.mutable
+
+6.life cycle methods
+1.mounting->component create hota hai or dom main insert krte hai(addeventlistener)->instance of component is created and inserted into the DOM
+2.unmounting->delete krna (removelistener)->instance of component is removed from the DOM
+3.updating->prope main koi change or kisi main bhi koi update->STATE UPDATES
+
+Mounting->constructor,render(virtual Dom),ComponentDidMount
+Updating->shouldComponentUpdate,ComponentWillUpdate(just before a component update cycle start),ComponentDidUpdate(component update done)
+Unmounting->ComponentWillUnmount
+
+React hooks-> 
+1. useState -> to maintain state
+2. useEffect-> to handle side Effect
+3. useRef-> to access DOM element
+
+const [color, setColor]= useState('red')
+         |        |         |        |
+         |        |       (Hook)   (initial value)
+(variable name)  (fn to change state)   
+
+useEffect => used to mainage side Effect (anything that is outside of react universe) eg-> local storage
+useEffect(()=>{
+
+},[]);
+   |
+   dependency array
+
+debouncing-> delay the execution of fn call
