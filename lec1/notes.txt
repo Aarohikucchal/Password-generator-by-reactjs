@@ -80,3 +80,6 @@ useEffect(()=>{
    dependency array
 
 debouncing-> delay the execution of fn call
+
+
+to access DOM element => React useRef
